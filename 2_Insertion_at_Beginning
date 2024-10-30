@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+//Creation of LinkedList
+
+struct Node{
+    int data;
+    struct Node* next;
+};
+
+//Insert At Beginning
+struct Node* insertAtBeginning(struct Node* head, int data){
+    struct Node* newnode = (struct Node*)malloc(sizeof(struct Node));
+    newnode->data=data;
+    newnode->next=head;
+    return newnode;
+}
+
+//Printing Linked List
+void print_list(struct Node* head){
+    struct Node* temp = head;
+    while(temp!=NULL){
+        printf("%d -> ",temp->data);
+        temp = temp->next;
+    }
+    printf("NULL");
+}
+//main function
+int main(){
+    struct Node* head = NULL;
+    printf("Enter values to insert and -1 to stop\n");
+    while(1){
+        int data;
+    scanf("%d",&data);
+    if(data == -1){
+      break;
+    }
+    head = insertAtBeginning(head, data);
+    }
+    print_list(head);
+}
