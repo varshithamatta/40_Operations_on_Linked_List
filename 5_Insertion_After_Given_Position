@@ -8,17 +8,6 @@ struct Node{
     struct Node* next;
 };
 
-// int length_list(struct Node* head){
-//     int cnt=0;
-//     struct Node* temp = head;
-//     while(temp!=NULL){
-//         cnt++;
-//         temp = temp->next;
-//     }
-//     return cnt;
-// }
-
-
 //Insertion at End (for initial linkedlist)
 struct Node* InsertionAtEnd(struct Node* head, int data){
     struct Node* new_node;
