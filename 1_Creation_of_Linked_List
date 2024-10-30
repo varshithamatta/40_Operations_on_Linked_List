@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+//Creation of LinkedList
+
+struct Node{
+    int data;
+    struct Node* next;
+};
+
+//main function
+int main(){
+    struct Node* head = null;
+}
