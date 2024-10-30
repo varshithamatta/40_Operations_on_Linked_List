@@ -36,7 +36,7 @@ struct Node* gotopos(struct Node* head, int pos){
 }
 
 //Insert Before Particular Position
-struct Node* insertAtParticularPos(struct Node* head, int data, int pos){
+struct Node* insertBeforePos(struct Node* head, int data, int pos){
     struct Node* temp = gotopos(head, pos);
     struct Node* newnode = (struct Node*)malloc(sizeof(struct Node));
     newnode->data=data;
@@ -73,6 +73,6 @@ int main(){
     printf("Enter the value of the element");
     int data;
     scanf("%d",&data);
-    insertAtParticularPos(head,data,pos);
+    insertBeforePos(head,data,pos);
     print_list(head);
 }
